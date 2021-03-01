@@ -6,10 +6,10 @@ import io.github.muth0mi.pooh.data.models.Pet
 class PetRepository {
 
     private val allPets = listOf(
-        Pet(name = "A", type = "Cat"),
-        Pet(name = "B", type = "Cat"),
-        Pet(name = "C", type = "Dog"),
-        Pet(name = "D", type = "Other")
+        Pet(id = 0, name = "A", type = "Cat"),
+        Pet(id = 1, name = "B", type = "Cat"),
+        Pet(id = 2, name = "C", type = "Dog"),
+        Pet(id = 3, name = "D", type = "Other")
     )
 
 

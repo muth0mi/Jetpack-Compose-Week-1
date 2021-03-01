@@ -38,7 +38,8 @@ fun OverviewPetList(
 private fun PetCard(pet: Pet, navController: NavController, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier.fillMaxWidth()
-            .clickable(onClick = { navController.navigate(Routes.details) })
+            .clickable(onClick = {
+                navController.navigate("${Routes.details}/${pet.id}") })
             .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
         Column {

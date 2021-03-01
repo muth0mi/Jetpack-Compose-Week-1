@@ -19,7 +19,7 @@ import io.github.muth0mi.pooh.viewmodels.OverviewViewModel
 
 @Composable
 fun OverviewTopAppBar(overviewViewModel: OverviewViewModel, modifier: Modifier = Modifier) {
-    Surface(elevation = 1.dp, modifier = modifier) {
+    Surface(elevation = AppBarDefaults.TopAppBarElevation, modifier = modifier) {
         Column {
             PoohTopAppBar()
             PetTypeTabs(overviewViewModel)

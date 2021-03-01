@@ -7,9 +7,10 @@ import androidx.navigation.NavController
 import io.github.muth0mi.pooh.viewmodels.OverviewViewModel
 
 @Composable
-fun OverviewScreen(navController: NavController) {
-    val overviewViewModel: OverviewViewModel = viewModel()
-
+fun OverviewScreen(
+    navController: NavController,
+    overviewViewModel: OverviewViewModel = viewModel()
+) {
     Scaffold(
         topBar = { OverviewTopAppBar(overviewViewModel) },
         content = { OverviewPetList(overviewViewModel, navController) }
