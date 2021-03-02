@@ -12,7 +12,9 @@ data class Pet(
     val dob: Long,
     val breed: String? = null,
     val images: List<String>,
-    val bio: String
+    val bio: String,
+    val size: String,
+    val color: String
 ) {
     fun getAge(): Int {
         val dob = Calendar.getInstance()

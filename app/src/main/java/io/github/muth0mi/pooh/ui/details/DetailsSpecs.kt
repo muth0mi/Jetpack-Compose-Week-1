@@ -44,9 +44,9 @@ fun DetailsSpecs(pet: Pet, detailViewModel: DetailsViewModel, modifier: Modifier
                 PetSpecSeparator(specsModifier)
                 PetSpec("Age", "${pet.getAge()}", specsModifier)
                 PetSpecSeparator(specsModifier)
-                PetSpec("Size", "${pet.getAge()}", specsModifier)
+                PetSpec("Size", pet.size, specsModifier)
                 PetSpecSeparator(specsModifier)
-                PetSpec("Color", "${pet.getAge()}", specsModifier)
+                PetSpec("Color", pet.color, specsModifier)
             }
 
             DetailsCallToAction(pet, detailViewModel)
