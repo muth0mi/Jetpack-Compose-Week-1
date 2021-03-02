@@ -42,7 +42,7 @@ fun DetailsSpecs(pet: Pet, detailViewModel: DetailsViewModel, modifier: Modifier
                 PetSpecSeparator(specsModifier)
                 PetSpec("Breed", pet.breed ?: "Unknown", specsModifier)
                 PetSpecSeparator(specsModifier)
-                PetSpec("Age", "${pet.getAge()}", specsModifier)
+                PetSpec("Age", "${if (pet.getAge() < 0) "<1" else pet.getAge()}", specsModifier)
                 PetSpecSeparator(specsModifier)
                 PetSpec("Size", pet.size, specsModifier)
                 PetSpecSeparator(specsModifier)

@@ -1,5 +1,6 @@
 package io.github.muth0mi.pooh.ui.overview
 
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -35,16 +36,6 @@ private fun PoohTopAppBar(
     TopAppBar(
         modifier = modifier,
         backgroundColor = backgroundColor,
-        navigationIcon = {
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Filled.Home, contentDescription = null)
-            }
-        },
-        actions = {
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Filled.Settings, contentDescription = null)
-            }
-        },
         title = {
             Column {
                 Row(
@@ -93,6 +84,7 @@ private fun PetTypeTabs(
             Tab(
                 selected = index == selectedIndex,
                 onClick = { overviewViewModel.selectPetType(petType) },
+                modifier = Modifier.height(48.dp),
                 content = {
                     Text(
                         text = petType,
