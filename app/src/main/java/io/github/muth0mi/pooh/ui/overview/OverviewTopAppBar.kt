@@ -66,7 +66,7 @@ private fun PetTypeTabs(
     val selectedIndex = petTypes.indexOfFirst { it == overviewViewModel.selectedPetType.value }
 
     val indicator = @Composable { tabPositions: List<TabPosition> ->
-        val color = MaterialTheme.colors.primary.copy(alpha = .2F)
+        val color = MaterialTheme.colors.primary
         PetTypeTabIndicator(
             Modifier
                 .tabIndicatorOffset(tabPositions[selectedIndex])
@@ -98,9 +98,5 @@ private fun PetTypeTabs(
 
 @Composable
 private fun PetTypeTabIndicator(modifier: Modifier = Modifier) {
-    Spacer(
-        modifier = modifier
-            .padding(horizontal = 16.dp)
-            .fillMaxHeight()
-    )
+    Spacer(modifier = modifier.padding(horizontal = 16.dp).height(3.dp))
 }

@@ -94,14 +94,19 @@ class PetRepository {
 
     val pets = mutableStateOf(listOf<Pet>())
     fun refreshPets(petType: String? = null) {
-        pets.value = if (petType == null) allPets else allPets.filter { it.type == petType }
+        pets.value = when (petType) {
+            null, "All" -> allPets
+            else -> allPets.filter { it.type == petType }
+        }
         updatePetTypes()
     }
 
 
     val petsTypes = mutableStateOf(listOf<String>())
     private fun updatePetTypes() {
-        petsTypes.value = allPets.map { it.type }.distinct().sorted()
+        val types = arrayListOf("All")
+        types.addAll(allPets.map { it.type }.distinct().sorted())
+        petsTypes.value = types
     }
 
 }
