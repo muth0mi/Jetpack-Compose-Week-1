@@ -15,4 +15,9 @@ class DetailsViewModel(
         return mutableStateOf(petRepository.pets.value.first { it.id == petId })
     }
 
+    val adopted = mutableStateOf(false)
+    fun adoptPet(petId: Int) {
+        adopted.value = true
+    }
+
 }
